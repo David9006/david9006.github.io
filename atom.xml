@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://david9006.github.io</id>
     <title>Gridea</title>
-    <updated>2022-05-04T12:00:01.006Z</updated>
+    <updated>2022-05-04T12:04:53.967Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://david9006.github.io"/>
     <link rel="self" href="https://david9006.github.io/atom.xml"/>
@@ -24,7 +24,7 @@
 <ul>
 <li>维护一个数组，数组的下标为难度，数组的元素代表其对应的难度中所有题目的美丽值的最大值，随后把此数组所有元素初始化为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>；</li>
 <li>在输入时，计算出对于每个难度中所有题目的美丽值的最大值；</li>
-<li>如果数组中有元素为0，说明那个元素所对应的难度中没有题目，输出<code>MOREPROBLEMS</code>；</li>
+<li>如果数组中有元素为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，说明那个元素所对应的难度中没有题目，输出<code>MOREPROBLEMS</code>；</li>
 <li>否则，输出此数组所有元素的总和。</li>
 </ul>
 <h2 id="3-代码">3. 代码</h2>
