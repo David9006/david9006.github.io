@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>Gridea</title>
+<title>洛谷 P1720 题解 | Gridea</title>
 <meta name="description" content="Stay hungry, stay foolish.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -75,43 +77,58 @@
 </transition>
 
 
-        <div class="content-container">
+      <div class="content-container">
+        <div class="post-detail">
           
-          
+          <h2 class="post-title">洛谷 P1720 题解</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-05-04</span>
+            
+          </div>
+          <div class="post-content">
+            <p>（题目链接：https://www.luogu.com.cn/problem/P1720）</p>
+<h2 id="1-思路">1. 思路</h2>
+<p>稍加观察，你即可发现题目中的公式为斐波那契数列的通项公式（斐波那契数列：https://baike.baidu.com/item/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/99145），所以其实此题就是让你算斐波那契数列的第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>项。</p>
+<h2 id="2-代码">2. 代码</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
 
-<div class="archives-container">
-  
-    <h2 class="year">2022</h2>
-    
-      
-        <article class="post">
-          <a href="https://david9006.github.io/post/luo-gu-p1720-ti-jie/">
-            <h2 class="post-title">
-              洛谷 P1720 题解
-              <small>2022-05-04</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://david9006.github.io/post/codeforces-1662-a-solution/">
-            <h2 class="post-title">
-              Codeforces 1662 A 题解
-              <small>2022-05-04</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-  
-</div>
+long long fibs[50] = {1, 1};
 
+void create_fibs() {
+    for (int i = 2; i &lt; 50; i++) {
+         fibs[i] = fibs[i - 1] + fibs[i - 2];
+    }
+}
 
+int main() {
+    int n;
+    cin &gt;&gt; n;
+
+    create_fibs();
+
+    cout &lt;&lt; fibs[n - 1] &lt;&lt; &quot;.00&quot;;    // 注意，此题要求保留两位小数
+    return 0; 
+}
+</code></pre>
+
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://david9006.github.io/post/codeforces-1662-a-solution/">
+              <h3 class="post-title">
+                下一篇：Codeforces 1662 A 题解
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
   <div class="slogan">Stay hungry, stay foolish.</div>
   <div class="social-container">
     
@@ -134,8 +151,8 @@
 </div>
 
 
-      </div>
-      <script type="application/javascript">
+    </div>
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
@@ -151,6 +168,5 @@ var app = new Vue({
 
 
 
-    </div>
   </body>
 </html>
