@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://david9006.github.io</id>
     <title>Gridea</title>
-    <updated>2022-05-11T12:08:07.822Z</updated>
+    <updated>2022-05-11T12:08:33.826Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://david9006.github.io"/>
     <link rel="self" href="https://david9006.github.io/atom.xml"/>
@@ -10,33 +10,6 @@
     <logo>https://david9006.github.io/images/avatar.png</logo>
     <icon>https://david9006.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Gridea</rights>
-    <entry>
-        <title type="html"><![CDATA[火星之旅]]></title>
-        <id>https://david9006.github.io/post/huo-xing-zhi-lu/</id>
-        <link href="https://david9006.github.io/post/huo-xing-zhi-lu/">
-        </link>
-        <updated>2022-05-11T12:03:12.000Z</updated>
-        <content type="html"><![CDATA[<p>（自编探险故事，<strong>勿喷</strong>）</p>
-<pre><code>    我、经验丰富的队长和我的胆子大的表哥一起在火星上的前哨站里。我们已经收拾好了东西，准备回基地了。
-    一踏出前哨站，强大的气流都快要把我们吹飞了。在我们前面，是特别强烈的沙尘暴所吹起的沙尘，它像一堵巨大的墙。顿时，所有人都凝固了。
-    队长第一个反应过来，他一边打开前哨站的门一边喊：“沙尘暴！”
-   我们迅速排成一队，顶着强大的气流，一步一步地向前哨站行进。随着前哨站加压完毕，我们脱下了这满是沙子的宇航服。
-   “我们有可能回不去了。”我沮丧地说。
-   “但是我们在这里也坚持不了多久，吃的已经不多了。”表哥说。
-   “也就是说，我们无论如何，也要回到基地。”队长坚定地说。
-   由于食物只能维持4天，我们在剩下的4天里用了所有的空闲时间制定回基地的计划并且收拾东西。幸好表哥偷偷带了15块士力架，我们路上才能有足够的能量。这些士力架，一人一天吃一块，刚好够吃。
-   前哨站里的食物吃完了，我们就要启程了。随着门的开启，非常强烈的风沙立刻钻进前哨站，我们能明显感受到沙尘暴加强了。我们排成一列，一步一步地走到了车里。我们刚关好门，前哨站就爆炸了，因为它承受不住如此强大的气流。
-   车缓缓离去，只留下那散乱的残骸。随着车内慢慢变暖，我们的心也渐渐地变暖了。
-</code></pre>
-<p>我们计划让这辆车每天充14小时的电，然后在夜里行进10小时。但是，车的充电时间开始变得越来越长。要是还是继续变长，我们恐怕需要花一整天给它充满电，虽然我们能等，但是我们的食物不够。<br>
-于是，我们准备把这个问题解决了。表哥接过方向盘，稳稳地把车停在一个大石头后面，穿上了宇航服，带上了工具，然后下车去修车。没过多久，他蹦蹦跳跳地回来了。<br>
-“你修好了吗？”我满怀期望地问。<br>
-“没，但是不需要在修了。”表哥笑着回答。<br>
-“为什么？”我问。<br>
-他指着前面微小的灯光，说：“我们马上就到了！”<br>
-那天，我们小小的庆祝了一下，地球那边也发来了祝福。那天晚上是我们在过去9天里睡的第一个安稳觉。</p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Codeforces 29 A 题解]]></title>
         <id>https://david9006.github.io/post/codeforces-29-a-ti-jie/</id>
