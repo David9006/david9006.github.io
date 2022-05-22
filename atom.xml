@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://david9006.github.io</id>
     <title>Gridea</title>
-    <updated>2022-05-21T07:11:01.780Z</updated>
+    <updated>2022-05-22T08:33:25.014Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://david9006.github.io"/>
     <link rel="self" href="https://david9006.github.io/atom.xml"/>
@@ -65,9 +65,6 @@ int main() {
 } while (0);
 
 using namespace std;
-
-const int dx[2] = {0, 1};
-const int dy[2] = {1, 0};
 
 int n, a, b;
 char tiles[15][15], board[105][105];
