@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://david9006.github.io</id>
     <title>Gridea</title>
-    <updated>2022-05-31T12:51:02.257Z</updated>
+    <updated>2022-06-11T03:11:29.168Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://david9006.github.io"/>
     <link rel="self" href="https://david9006.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://david9006.github.io/images/avatar.png</logo>
     <icon>https://david9006.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[班级里的“快递服务”（上）]]></title>
+        <id>https://david9006.github.io/post/ban-ji-li-de-kuai-di-fu-wu-shang/</id>
+        <link href="https://david9006.github.io/post/ban-ji-li-de-kuai-di-fu-wu-shang/">
+        </link>
+        <updated>2022-06-11T02:15:43.000Z</updated>
+        <content type="html"><![CDATA[<p>期中考试过后，同学们的作业量增加了不少。于是，为了在学校写完作业，我的同学就开始把作业带到宿舍里写。但是，我们的老师都不允许这个行为，所以我们只能偷偷摸摸地带作业到宿舍里。有些同学被张老师威慑住了，不敢带，于是就让我们这些胆大的人帮忙带，报酬就是一杯奶。</p>
+<p>过了一两个星期，班里的“快递服务”就初步形成了。班里有“快递员”，专门为客户带作业。我们一到吃饭的时间，就会与我们的客户在教师里的一个小角落接头，客户这时就会把要送的“快递”给我们。我们一般是先送快递再吃饭，因为这时老师都在食堂里吃饭，宿舍里空无一人，不容易被发现。客户签收了，就会支付“邮费”，通常是一瓶7元的奶。如果钱不够了，我们就会找一个小本本把他欠的邮费记下来，然后我们每天就会像催债人一样催客户付欠下来的邮费。</p>
+<p>我们对每个客户都有一个“信用值”。每个客户的信用值最开始都是100，如果一个客户欠了邮费，他的信用值就会减5，如果他把欠的邮费支付了，他的信用值就会加4。如果一个客户的信用值在<strong>80及以下</strong>，我们就不会向他提供服务。</p>
+<p>现在有很多人在和我竞争，但是因为我接的单最多，并且每个快递都安全的送到了宿舍，我几乎是“垄断”了这个服务。我的竞争对手要么是刚起家，要么是服务质量不够好，导致他们无法占上风。</p>
+<p>这就是我们班庞大的“快递服务”。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[  华昌龙之谷游记]]></title>
         <id>https://david9006.github.io/post/hua-chang-long-zhi-gu-you-ji/</id>
