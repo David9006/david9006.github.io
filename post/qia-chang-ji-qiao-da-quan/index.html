@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>卡常技巧大全 | 金苹果的博客</title>
+<meta name="description" content="Ranger_HoFr AK IOI!">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://david9006.github.io/favicon.ico?v=1732346642894">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://david9006.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://david9006.github.io">
+        <img class="avatar" src="https://david9006.github.io/images/avatar.png?v=1732346642894" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://david9006.github.io">
+        <h1 class="site-title">金苹果的博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">卡常技巧大全</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2024-11-23</span>
+            
+          </div>
+          <div class="post-content" v-pre>
+            <p>本文主要记录考场上可用的（玄学）卡常技巧。</p>
+<p>若有补充，欢迎留言。</p>
+<h2 id="io-优化">I/O 优化</h2>
+<ul>
+<li><code>ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr)</code> 可以关闭同步流，有时比快读快写更快。与文件读写共同使用时，需要在程序结尾加入 <code>cout.flush()</code>。</li>
+<li>（<strong>仅支持 Linux</strong>）可以使用 <code>getchar_unlocked()</code>、<code>putchar_unlocked()</code> 分别替换 <code>getchar()</code>、<code>putchar()</code> 来进行优化。</li>
+<li>一般情况下，<code>printf()</code> 比快写更快。</li>
+<li><a href="https://oi-wiki.org/contest/io/">快读快写模板</a>。</li>
+</ul>
+<h2 id="位运算">位运算</h2>
+<p>该板块中出现的变量皆为整数。</p>
+<ul>
+<li>可以用 <code>x &lt;&lt; k</code> 表示 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>⋅</mo><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">x \cdot 2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44445em;vertical-align:0em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span>。</li>
+<li>可以用 <code>x &gt;&gt; k</code> 表示 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo fence="true">⌊</mo><mfrac><mi>x</mi><msup><mn>2</mn><mi>k</mi></msup></mfrac><mo fence="true">⌋</mo></mrow><annotation encoding="application/x-tex">\left \lfloor \dfrac{x}{2^k} \right \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.8359999999999999em;vertical-align:-0.686em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">⌊</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7751079999999999em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">⌋</span></span></span></span></span></span>。在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 大于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 的位数时（如将 <code>int</code> 类型的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 右移 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>35</mn></mrow><annotation encoding="application/x-tex">35</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">5</span></span></span></span> 位）为 UB，GCC 9.4.0 的实现为将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 对位数取模。</li>
+<li>（<strong><code>lowbit</code> 运算</strong>）可以用 <code>x &amp; -x</code> 表示 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 的二进制表示中最低位的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 及其后面的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 组成的数。</li>
+<li>可以用 <code>(x &amp; (x - 1)) == 0</code> 来判断 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 是否为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 的整数次幂。</li>
+<li>（<strong><code>int</code> 除法优化</strong>）可以将 <code>a / x</code> 优化为 <code>a * m &gt;&gt; n</code>，其中 <code>m = ((1LL &lt;&lt; (31 + log2(x))) + x - 1) / x, n = 31 + log2(x)</code>。建议在除数固定或大量被使用时使用。</li>
+</ul>
+<h2 id="内置函数">内置函数</h2>
+<p>该板块中的内置函数皆带有编译器的指令级优化，速度极快。</p>
+<ul>
+<li><code>__builtin_ctz(int x)</code> / <code>__builtin_ctzll(long long x)</code>：返回 <code>x</code> 二进制表示中末尾 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 的个数。</li>
+<li><code>__buitlin_clz(int x)</code> / <code>__buitlin_clzll(long long x)</code>：返回 <code>x</code> 二进制表示中前导 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 的个数。</li>
+<li><code>__builtin_popcount(int x)</code> / <code>__builtin_popcountll(long long x)</code>：返回 <code>x</code> 二进制表示中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的个数。</li>
+<li><code>__builtin_parity(int x)</code> / <code>__builtin_parityll(long long x)</code>：返回 <code>x</code> 二进制表示中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的个数的奇偶性。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 为偶数、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 为奇数。</li>
+<li><code>__builtin_ffs(int x)</code> / <code>__builtin_ffsll(long long x)</code>：返回 <code>x</code> 的二进制表示的最后一个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 在第几位。</li>
+<li><code>__lg(int x)</code>：返回 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><msub><mi>log</mi><mo>⁡</mo><mn>2</mn></msub><mi>x</mi><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor \log_2 x \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.20696799999999996em;"><span style="top:-2.4558600000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">x</span><span class="mclose">⌋</span></span></span></span>。</li>
+<li><code>__builtin_sqrt(double x)</code> / <code>__builtin_sqrtf(float x)</code> / <code>__builtin_sqrtl(long double x)</code>：返回 <code>x</code> 的开平方。</li>
+</ul>
+<h2 id="policy-based-data-structures">Policy-Based Data Structures</h2>
+<ul>
+<li>简称：<code>pd_ds</code>，<s>并不是平板电视</s>。</li>
+<li>头文件：<code>&lt;bits/extc++.h&gt;</code>。</li>
+<li>具体介绍见<a href="https://oi-wiki.org/lang/pb-ds/">此</a>。</li>
+</ul>
+<h2 id="其他优化">其他优化</h2>
+<ul>
+<li>
+<p>将按顺序访问的内存挨在一起布局可以加速。</p>
+<p>示例：在写倍增时，可以将倍增数组 <code>f[N][32]</code> 写成 <code>f[32][N]</code>，这样访问到的内存挨的更近。</p>
+</li>
+<li>
+<p>使用 <code>bitset</code> 代替 <code>bool</code> 数组，可以将时间优化到原来的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">1 / \omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span></span></span></span>（因为 <code>bitset</code> 为压位存储），其中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ω</mi></mrow><annotation encoding="application/x-tex">\omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span></span></span></span> 一般为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 或 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>64</mn></mrow><annotation encoding="application/x-tex">64</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">4</span></span></span></span>（因机器而异）。</p>
+<p>示例：埃氏筛 + <code>bitset</code> 比线性筛快。</p>
+</li>
+<li>
+<p>可以将高开销且大量被使用的值用局部变量存储。</p>
+<p>示例：在大量使用 <code>c % 114514</code> 时，用 <code>tmp = c % 114514</code> 存储起来可以加速。</p>
+</li>
+<li>
+<p>有一些 STL 常数较大，如 <code>vector</code>、<code>list</code>，和任何以 <code>deque</code> 为底层容器的容器。对于一些容器可以使用 <code>reserve()</code> 预先分配空间。</p>
+</li>
+</ul>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://david9006.github.io/post/wu-li-bi-ji/">
+              <h3 class="post-title">
+                下一篇：物理笔记
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">Ranger_HoFr AK IOI!</div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/David9006/david9006.github.io" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://david9006.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
